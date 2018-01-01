@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AAblop/</loc>
+    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -86,12 +91,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/markdown/</loc>
     <lastmod>2013-07-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -124,6 +123,12 @@
   <url>
     <loc>/tags/themes/</loc>
     <lastmod>2014-07-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

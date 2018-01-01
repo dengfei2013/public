@@ -1,0 +1,14 @@
+---
+title: 我的第二个blop
+author: Dave
+date: '2018-01-01'
+slug: 我的第二个blop
+categories: []
+tags: []
+---
+
+```{r}
+example(aov)
+example(plot)
+```
+
