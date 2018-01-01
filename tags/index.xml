@@ -7,19 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>Ch</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Jupyter</title>
-      <link>/tags/jupyter/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/jupyter/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
