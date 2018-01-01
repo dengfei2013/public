@@ -1,0 +1,15 @@
+---
+title: 我的第一个markdown
+author: Dave
+date: '2018-01-01'
+slug: 我的第一个markdown
+categories: []
+tags: []
+---
+
+### 测试
+
+```{r}
+library(asreml)
+example(asreml)
+```
