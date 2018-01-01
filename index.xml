@@ -33,50 +33,18 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>Hello 2018 again</title>
-      <link>/post/hello-2018-again/</link>
+      <title>2018新年计划</title>
+      <link>/post/2018-firt-blog/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-2018-again/</guid>
-      <description>I want to say hello to you:2018!!!That’s very cool.
-</description>
-    </item>
-    
-    <item>
-      <title>Hello2018</title>
-      <link>/post/hello2018/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hello2018/</guid>
-      <description> 大家好，我是2018 </description>
-    </item>
-    
-    <item>
-      <title>我的第一个markdown</title>
-      <link>/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAmarkdown/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAmarkdown/</guid>
-      <description>测试 library(asreml) ## 载入需要的程辑包：lattice  ## Licensed to: VSN China ## Serial Number: 402060580 Expires: 01-mar-2018 (59 days)  example(asreml) ## ## asreml&amp;gt; dat &amp;lt;- data.frame(y=rnorm(20),x=seq(1,20)) ## ## asreml&amp;gt; ex.asr &amp;lt;- asreml(y ~ x, data=dat) ## ASReml: Mon Jan 01 10:01:40 2018 ## ## LogLik S2 DF wall cpu ## -13.3875 0.9608 18 10:01:40 0.0 ## -13.3875 0.9608 18 10:01:40 0.0 ## ## Finished on: Mon Jan 01 10:01:40 2018 ## ## LogLikelihood Converged ## ## asreml&amp;gt; ## The oats data ## asreml&amp;gt; data(oats) ## ## asreml&amp;gt; oats.</description>
-    </item>
-    
-    <item>
-      <title>我的第二个blop</title>
-      <link>/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AAblop/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AAblop/</guid>
-      <description>example(aov) ## ## aov&amp;gt; ## From Venables and Ripley (2002) p.165. ## aov&amp;gt; ## aov&amp;gt; ## Set orthogonal contrasts. ## aov&amp;gt; op &amp;lt;- options(contrasts = c(&amp;quot;contr.helmert&amp;quot;, &amp;quot;contr.poly&amp;quot;)) ## ## aov&amp;gt; ( npk.aov &amp;lt;- aov(yield ~ block + N*P*K, npk) ) ## Call: ## aov(formula = yield ~ block + N * P * K, data = npk) ## ## Terms: ## block N P K N:P N:K ## Sum of Squares 343.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/post/_book/_main/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/_book/_main/</guid>
-      <description>Hello 2018 again0.1 I want to say hello to you:2018!!!Hello 2018 againHello 2018 againDave2018-01-010.1 I want to say hello to you:2018!!!That’s very cool.
-gitbook.require([&#34;gitbook&#34;], function(gitbook) {gitbook.start({&#34;sharing&#34;: {&#34;github&#34;: false,&#34;facebook&#34;: true,&#34;twitter&#34;: true,&#34;</description>
+      <guid>/post/2018-firt-blog/</guid>
+      <description>开头 这是2018年的第一篇博客，也建立了自己的网站。以后博客在这上面更新。
+计划  锻炼身体   体重控制在135，经常跑步、走路、打排球，多做运动，只有健康的身体，才能有健康的身心。
+  学习   要多多的利用时间，学习各种知识，即使行业比较低迷，但是一定要不停的学习新东西，去实践和思考。
+  陪伴家人   2018年要多多陪伴家人，多给父母打电话，多留时间陪果果成长。以后要经常回家，远程办公应该成为常态。
+  写博客   一个人没有博客，就像这个人没有存在一样，我要经常写博客，写技术资料，写生活感想。
+ 希望2018年，家人健健康康，果果茁壮成长，大家多多赚钱，生活幸福。
+写于 2018年1月1日</description>
     </item>
     
   </channel>

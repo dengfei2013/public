@@ -13,31 +13,24 @@
   </url>
   
   <url>
-    <loc>/post/hello-2018-again/</loc>
+    <loc>/post/2018-firt-blog/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/hello2018/</loc>
+    <loc>/tags/2018/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAmarkdown/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AAblop/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/_book/_main/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/hello-2018/</loc>
+    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -49,6 +42,7 @@
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
