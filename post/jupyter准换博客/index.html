@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="Ch">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Jupyter准换博客</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="Dave" />
+  <meta name="description" content="01单性状BLUP计算方法
+ 刘文忠, 徐银学. 动物育种学实验教程[M]. 中国农业大学出版社, 2007. 实验十八：单性状动物模型BLUP育种值估计
+ 实验目的  熟悉并掌握无重复观测值时动物模型BLUP育种值估计的基本原理和方法 了解育种软件的基本原理及使用方法  实验内容  模型 混合模型方程组及其求解 育种值估计的准确性 育种值估计的可靠性  模型 $y_{ij} = h_i &#43; aj &#43; e{ij}$
+其中
+$y_{ij} = $ 第i个牧场第j头奶牛的产奶量，即表型观测值
+$h_{i} = $ 第i个牧场对奶牛的效应值，即固定环境效应
+$a_{j} = $ 第j头奶牛的加性遗传效应（育种值），即随机遗传效应
+$e_{ij} = $ 第i个牧场第j头奶牛的随机误差
+矩阵形式 $ y = Xh &#43; Za &#43; e$
+其中：
+y= 表型观测值向量
+h= 固定环境效应向量
+X= 固定环境效应h的关联矩阵
+a= 随机效应，即育种值向量
+Z= 随机效应a的关系矩阵
+e= 随机残差效应向量
+假定 $$E(a) = E(e) = 0" />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="Jupyter准换博客" />
+    <meta name="twitter:description" content="01单性状BLUP计算方法
+ 刘文忠, 徐银学. 动物育种学实验教程[M]. 中国农业大学出版社, 2007. 实验十八：单性状动物模型BLUP育种值估计
+ 实验目的  熟悉并掌握无重复观测值时动物模型BLUP育种值估计的基本原理和方法 了解育种软件的基本原理及使用方法  实验内容  模型 混合模型方程组及其求解 育种值估计的准确性 育种值估计的可靠性  模型 $y_{ij} = h_i &#43; aj &#43; e{ij}$
+其中
+$y_{ij} = $ 第i个牧场第j头奶牛的产奶量，即表型观测值
+$h_{i} = $ 第i个牧场对奶牛的效应值，即固定环境效应
+$a_{j} = $ 第j头奶牛的加性遗传效应（育种值），即随机遗传效应
+$e_{ij} = $ 第i个牧场第j头奶牛的随机误差
+矩阵形式 $ y = Xh &#43; Za &#43; e$
+其中：
+y= 表型观测值向量
+h= 固定环境效应向量
+X= 固定环境效应h的关联矩阵
+a= 随机效应，即育种值向量
+Z= 随机效应a的关系矩阵
+e= 随机残差效应向量
+假定 $$E(a) = E(e) = 0" />
+    <meta name="twitter:image" content="/img/avatar.jpg" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Jupyter准换博客" />
+  <meta property="og:description" content="01单性状BLUP计算方法
+ 刘文忠, 徐银学. 动物育种学实验教程[M]. 中国农业大学出版社, 2007. 实验十八：单性状动物模型BLUP育种值估计
+ 实验目的  熟悉并掌握无重复观测值时动物模型BLUP育种值估计的基本原理和方法 了解育种软件的基本原理及使用方法  实验内容  模型 混合模型方程组及其求解 育种值估计的准确性 育种值估计的可靠性  模型 $y_{ij} = h_i &#43; aj &#43; e{ij}$
+其中
+$y_{ij} = $ 第i个牧场第j头奶牛的产奶量，即表型观测值
+$h_{i} = $ 第i个牧场对奶牛的效应值，即固定环境效应
+$a_{j} = $ 第j头奶牛的加性遗传效应（育种值），即随机遗传效应
+$e_{ij} = $ 第i个牧场第j头奶牛的随机误差
+矩阵形式 $ y = Xh &#43; Za &#43; e$
+其中：
+y= 表型观测值向量
+h= 固定环境效应向量
+X= 固定环境效应h的关联矩阵
+a= 随机效应，即育种值向量
+Z= 随机效应a的关系矩阵
+e= 随机残差效应向量
+假定 $$E(a) = E(e) = 0" />
+  <meta property="og:url" content="/post/jupyter%E5%87%86%E6%8D%A2%E5%8D%9A%E5%AE%A2/" />
+  <meta property="og:image" content="/img/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.31.1" />
+
+
+<link rel="canonical" href="/post/jupyter%E5%87%86%E6%8D%A2%E5%8D%9A%E5%AE%A2/" />
+<link rel="alternative" href="/index.xml" title="邓飞" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="邓飞" />
+<meta name="msapplication-tooltip" content="邓飞" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/bundle.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+        <a title="Go to comments" class="to-comment" href="#disqus_thread"><span class="icon icon-comment"></span></a>
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="/img/df.jpg" alt="Avatar">
+  
+  <h2 class="title">邓飞</h2>
+  
+  <p class="subtitle">君子当自强不息</p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            
+              is-active
+            ">
+            <a href="/">Blog</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="/tags/">Tag</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="/links/">Links</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="/about/">About</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Jupyter准换博客</h1>
+      <p class="post-meta">@Dave · Jan 1, 2018 · 2 min read</p>
+    </header>
+    <article class="post-content">
+
+<p>01单性状BLUP计算方法</p>
+
+<blockquote>
+<p>刘文忠, 徐银学. 动物育种学实验教程[M]. 中国农业大学出版社, 2007.
+实验十八：单性状动物模型BLUP育种值估计</p>
+</blockquote>
+
+<h3 id="实验目的">实验目的</h3>
+
+<ul>
+<li>熟悉并掌握无重复观测值时动物模型BLUP育种值估计的基本原理和方法</li>
+<li>了解育种软件的基本原理及使用方法</li>
+</ul>
+
+<h3 id="实验内容">实验内容</h3>
+
+<ul>
+<li>模型</li>
+<li>混合模型方程组及其求解</li>
+<li>育种值估计的准确性</li>
+<li>育种值估计的可靠性</li>
+</ul>
+
+<h4 id="模型">模型</h4>
+
+<p>$y_{ij} = h_i + a<em>j + e</em>{ij}$</p>
+
+<p>其中</p>
+
+<p>$y_{ij} = $ 第i个牧场第j头奶牛的产奶量，即表型观测值</p>
+
+<p>$h_{i} = $ 第i个牧场对奶牛的效应值，即固定环境效应</p>
+
+<p>$a_{j} = $ 第j头奶牛的加性遗传效应（育种值），即随机遗传效应</p>
+
+<p>$e_{ij} = $ 第i个牧场第j头奶牛的随机误差</p>
+
+<h4 id="矩阵形式">矩阵形式</h4>
+
+<p>$ y = Xh + Za + e$</p>
+
+<p>其中：</p>
+
+<p>y= 表型观测值向量</p>
+
+<p>h= 固定环境效应向量</p>
+
+<p>X= 固定环境效应h的关联矩阵</p>
+
+<p>a= 随机效应，即育种值向量</p>
+
+<p>Z= 随机效应a的关系矩阵</p>
+
+<p>e= 随机残差效应向量</p>
+
+<h4 id="假定">假定</h4>
+
+<p>$$E(a) = E(e) = 0<br />
+Var(a) = G = {\sigma_a}^2 * A<br />
+Var(e) = R = {\sigma_e}^2 * I $$</p>
+
+<p>其中随机因子构成的矩阵为<strong>G矩阵</strong>，残差构成的矩阵是<strong>R矩阵</strong>，A是<strong>亲缘关系矩阵</strong></p>
+
+<h4 id="混合线性方程组">混合线性方程组</h4>
+
+<p>$$
+\begin{bmatrix}
+X&rsquo;X &amp; X&rsquo;Z <br />
+Z&rsquo;X &amp; Z&rsquo;Z + A^{-1}K
+\end{bmatrix}
+\begin{bmatrix}
+\widehat{\mu} <br />
+\widehat{\alpha}
+\end{bmatrix}=
+\begin{bmatrix}
+X&rsquo;Y <br />
+Z&rsquo;Y
+\end{bmatrix}<br />
+$$
+其中$A_{-1}$ 是A的逆矩阵，X&rsquo;是X的关系矩阵，Z&rsquo;是Z的关系矩阵，$k = \frac{{\sigma_e}^2}{{\sigma_a}^2}$</p>
+
+<h3 id="个体育种值估计的准确性">个体育种值估计的准确性</h3>
+
+<blockquote>
+<p>育种值的准确性：由估计育种值与真实育种值之间的相关系数$r_{a_i\widehat{a<em>j}}$来度量。其公式为 $$ r</em>{a_i\widehat{a_j}} = \frac{Cov(a_i,\widehat{a<em>i})}{\sigma</em>{a<em>i}\sigma</em>{\widehat{a_i}}} = \sqrt{\frac{{\sigma<em>a}^2 - d</em>{a_i}{\sigma_e^2}} {{\sigma_a}^2}} =
+\sqrt{1 - \frac{se^2}{{\sigma<em>a}^2}}  \ $$
+其中，$d</em>{ai}*Ve$是BLUP的标准误的平方，如果更进一步考虑，也可以考虑近交系数。</p>
+</blockquote>
+
+<h3 id="数据">数据</h3>
+
+<p>数据包括2个场的7个个体的观测值，性状的遗传力为1/3.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">chang <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>)
+ID <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">c</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span>)
+Sire <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>)
+Dam <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>)
+y <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">c</span>(<span style="color:#ae81ff">225</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">255</span>,<span style="color:#ae81ff">250</span>,<span style="color:#ae81ff">198</span>,<span style="color:#ae81ff">245</span>,<span style="color:#ae81ff">260</span>)
+dat <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">data.frame</span>(chang,ID,Sire,Dam,y)
+ped <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">data.frame</span>(ID,Sire,Dam)
+
+dat<span style="color:#f92672">$</span>ID <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">as.factor</span>(dat<span style="color:#f92672">$</span>ID)</code></pre></div>
+<h2 id="asreml处理流程">asreml处理流程</h2>
+
+<p><strong>计算亲缘关系矩阵</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">library</span>(asreml)
+ainv <span style="color:#f92672">&lt;-</span> asreml.Ainverse(ped)<span style="color:#f92672">$</span>ginv
+A <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">round</span>(<span style="color:#66d9ef">solve</span>(asreml.sparse2mat(ainv)),<span style="color:#ae81ff">4</span>)
+A</code></pre></div>
+<table>
+<tbody>
+    <tr><td>1.000 </td><td>0.00  </td><td>0.500 </td><td>0.5000</td><td>0.5000</td><td>0.7500</td><td>0.6250</td></tr>
+    <tr><td>0.000 </td><td>1.00  </td><td>0.000 </td><td>0.5000</td><td>0.2500</td><td>0.2500</td><td>0.2500</td></tr>
+    <tr><td>0.500 </td><td>0.00  </td><td>1.000 </td><td>0.2500</td><td>0.6250</td><td>0.3750</td><td>0.5000</td></tr>
+    <tr><td>0.500 </td><td>0.50  </td><td>0.250 </td><td>1.0000</td><td>0.6250</td><td>0.7500</td><td>0.6875</td></tr>
+    <tr><td>0.500 </td><td>0.25  </td><td>0.625 </td><td>0.6250</td><td>1.1250</td><td>0.5625</td><td>0.8438</td></tr>
+    <tr><td>0.750 </td><td>0.25  </td><td>0.375 </td><td>0.7500</td><td>0.5625</td><td>1.2500</td><td>0.9063</td></tr>
+    <tr><td>0.625 </td><td>0.25  </td><td>0.500 </td><td>0.6875</td><td>0.8438</td><td>0.9062</td><td>1.2813</td></tr>
+</tbody>
+</table>
+
+<p><strong>定义遗传力和方差组分，这里定义残差方差组分为2，加性方差组分为1</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">Va <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">names</span>(Va) <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;F&#34;</span>
+Ve <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">20</span>
+<span style="color:#66d9ef">names</span>(Ve) <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;F&#34;</span></code></pre></div>
+<p><strong>定义模型：chang为固定因子，加性效应为随机因子</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">mod <span style="color:#f92672">&lt;-</span> asreml(y <span style="color:#f92672">~</span> chang, random <span style="color:#f92672">=~</span> ped(ID,init<span style="color:#f92672">=</span>Va), ginverse <span style="color:#f92672">=</span> <span style="color:#66d9ef">list</span>(ID<span style="color:#f92672">=</span>ainv),family<span style="color:#f92672">=</span>asreml.gaussian(dispersion <span style="color:#f92672">=</span> Ve),data<span style="color:#f92672">=</span>dat)</code></pre></div>
+<pre><code>ASReml: Tue Dec 26 15:34:25 2017
+
+     LogLik         S2      DF      wall     cpu
+    -88.0641     20.0000     5  15:34:25     0.0
+    -88.0641     20.0000     5  15:34:25     0.0
+    -88.0641     20.0000     5  15:34:25     0.0
+    -88.0641     20.0000     5  15:34:25     0.0
+
+Finished on: Tue Dec 26 15:34:25 2017
+
+LogLikelihood Converged 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#66d9ef">summary</span>(mod)<span style="color:#f92672">$</span>varcomp</code></pre></div>
+<table>
+<thead><tr><th></th><th scope=col>gamma</th><th scope=col>component</th><th scope=col>std.error</th><th scope=col>z.ratio</th><th scope=col>constraint</th></tr></thead>
+<tbody>
+    <tr><th scope=row>ped(ID)!ped</th><td>10   </td><td>10   </td><td>NA   </td><td>NA   </td><td>Fixed</td></tr>
+    <tr><th scope=row>R!variance</th><td>20   </td><td>20   </td><td>NA   </td><td>NA   </td><td>Fixed</td></tr>
+</tbody>
+</table>
+
+<p><strong>育种值</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">coef(mod)<span style="color:#f92672">$</span>random</code></pre></div>
+<table>
+<thead><tr><th></th><th scope=col>effect</th></tr></thead>
+<tbody>
+    <tr><th scope=row>ped(ID)_1</th><td> 4.7684103</td></tr>
+    <tr><th scope=row>ped(ID)_2</th><td>-7.3650649</td></tr>
+    <tr><th scope=row>ped(ID)_3</th><td> 6.2791870</td></tr>
+    <tr><th scope=row>ped(ID)_4</th><td> 0.3736533</td></tr>
+    <tr><th scope=row>ped(ID)_5</th><td>-3.1210992</td></tr>
+    <tr><th scope=row>ped(ID)_6</th><td> 5.6745901</td></tr>
+    <tr><th scope=row>ped(ID)_7</th><td> 5.0708464</td></tr>
+</tbody>
+</table>
+
+<p><strong>准确性</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">blup <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">as.data.frame</span>(<span style="color:#66d9ef">summary</span>(mod,all<span style="color:#f92672">=</span>T)<span style="color:#f92672">$</span>coef.random)
+
+se <span style="color:#f92672">&lt;-</span> blup<span style="color:#f92672">$</span><span style="color:#e6db74">`std error`</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">se</code></pre></div>
+<ol class=list-inline>
+    <li>0.906819701436525</li>
+    <li>0.884076068053362</li>
+    <li>0.902840506374947</li>
+    <li>0.977239911045371</li>
+    <li>1.01622836955883</li>
+    <li>1.05526840740266</li>
+    <li>1.08791574742127</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">r <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">sqrt</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>se<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span>Va)
+blup<span style="color:#f92672">$</span>r <span style="color:#f92672">&lt;-</span> r
+r_2 <span style="color:#f92672">&lt;-</span> r<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span></code></pre></div>
+<p><strong>可靠性</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">blup<span style="color:#f92672">$</span>r_2 <span style="color:#f92672">&lt;-</span> r_2</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">blup</code></pre></div>
+<table>
+<thead><tr><th></th><th scope=col>solution</th><th scope=col>std error</th><th scope=col>z ratio</th><th scope=col>r</th><th scope=col>r_2</th></tr></thead>
+<tbody>
+    <tr><th scope=row>ped(ID)_1</th><td> 4.7684103</td><td>2.867616  </td><td> 1.6628485</td><td>0.9580020 </td><td>0.9177678 </td></tr>
+    <tr><th scope=row>ped(ID)_2</th><td>-7.3650649</td><td>2.795694  </td><td>-2.6344317</td><td>0.9601255 </td><td>0.9218410 </td></tr>
+    <tr><th scope=row>ped(ID)_3</th><td> 6.2791870</td><td>2.855032  </td><td> 2.1993401</td><td>0.9583777 </td><td>0.9184879 </td></tr>
+    <tr><th scope=row>ped(ID)_4</th><td> 0.3736533</td><td>3.090304  </td><td> 0.1209115</td><td>0.9510522 </td><td>0.9045002 </td></tr>
+    <tr><th scope=row>ped(ID)_5</th><td>-3.1210992</td><td>3.213596  </td><td>-0.9712170</td><td>0.9469572 </td><td>0.8967280 </td></tr>
+    <tr><th scope=row>ped(ID)_6</th><td> 5.6745901</td><td>3.337052  </td><td> 1.7004801</td><td>0.9426775 </td><td>0.8886409 </td></tr>
+    <tr><th scope=row>ped(ID)_7</th><td> 5.0708464</td><td>3.440292  </td><td> 1.4739583</td><td>0.9389590 </td><td>0.8816439 </td></tr>
+</tbody>
+</table>
+</article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="/tags/jupyter"><span class="tag">Jupyter</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.
+      </p>
+    </footer>
+    
+      <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017-2018 邓飞</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+<script src="/js/bundle.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-XXXXXXXX-X', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+  </body>
+</html>
